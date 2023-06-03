@@ -1,4 +1,10 @@
 {
+  "name": "svg-logo-generator",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
   "dependencies": {
     "inquirer": "^9.2.6",
     "node": "^20.2.0",
