@@ -6,7 +6,7 @@ import inquirer from 'inquirer';
 import fs from 'fs';
 import { svgCreator } from './utils/generateSvg.js';
 
-const shapeList = ["Triangle", "Circle", "Rectangle"];
+const shapeList = ["Triangle", "Circle", "Square"];
 const colorList = ["red", "blue", "green", "yellow", "white", "black", "brown", "pink", "purple", "orange"];
 const sizeList = ["small", "medium", "large"];
 const questions = [
@@ -24,6 +24,12 @@ const questions = [
     },
     {
         type: 'list',
+        name: 'textcolor',
+        message: 'What color would you like your text to be?',
+        choices: colorList,
+    },
+    {
+        type: 'list',
         name: 'size',
         message: 'What size would you like your icon to be?',
         choices: sizeList,
@@ -31,7 +37,7 @@ const questions = [
     {
         type: 'input',
         name: 'text',
-        message: 'What text would you like on your icon?',
+        message: 'What text would you like on your icon? (3 Characters Max)',
     }
 ]
 
