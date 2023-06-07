@@ -7,10 +7,10 @@ function iconSize(shape) {
             return `rect x="75" y="30" width="150" height="150" dominant-baseline="middle"`;
             break;
         case "Triangle":
-            return `polygon points="150 0, 300 300, 0 300"`;
+            return `polygon points="150 0, 350 300, -40 300"`;
             break;
         default:
-            return `cx="smallsize" cy="smallsize" r="something small"`;
+            return `circle cx="150" cy="100" r="80"`;
     }
 };
 
