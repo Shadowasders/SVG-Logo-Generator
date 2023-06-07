@@ -2,13 +2,13 @@
 // use inquirer to ask the necessary setup questions (what shape, what size, what color, what text)
 // use fs write file to create an svg file, and use string literals to put the users preferences into said svg
 // to start, import inquirer and svg (watch end of class video)
-import inquirer from 'inquirer';
-import fs from 'fs';
-import { svgCreator } from './utils/generateSvg.js';
+
+const inquirer = require('inquirer');
+const fs = require('fs');
+const svgCreator = require('./utils/generateSvg');
 
 const shapeList = ["Triangle", "Circle", "Square"];
 const colorList = ["red", "blue", "green", "yellow", "white", "black", "brown", "pink", "purple", "orange"];
-const sizeList = ["small", "medium", "large"];
 const questions = [
     {
         type: 'list',
@@ -27,12 +27,6 @@ const questions = [
         name: 'textcolor',
         message: 'What color would you like your text to be?',
         choices: colorList,
-    },
-    {
-        type: 'list',
-        name: 'size',
-        message: 'What size would you like your icon to be?',
-        choices: sizeList,
     },
     {
         type: 'input',
