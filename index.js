@@ -43,19 +43,13 @@ function writeFile(filename, data) {
 function init() {
     inquirer.prompt(questions)
         .then(answers => {
-            // your logic about
-
+            if (answers.text.length > 3){
+                console.log("Your text must be less than 3 characters");
+                return
+            }
             const svg = svgCreator(answers);
-
-            inquirer.prompt([{
-                type: 'input',
-                name: 'filename',
-                message: 'What would you like to name your file?',
-            }]).then(res => {
-                console.log(res);
-                writeFile(`${res.filename}.svg`, svg);
-            })
-           
+                writeFile(`icon.svg`, svg);
+                console.log("Your icon has been created!")  
         })
         .catch(error => {
             console.log(error)
