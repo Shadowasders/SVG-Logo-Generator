@@ -9,6 +9,9 @@
   - [Testing](#testing)
   - [Contact](#contact)
 
+  ##Video
+
+  [SVG Generator video.webm](https://github.com/Shadowasders/SVG-Logo-Generator/assets/99014955/d14628c3-1c54-4885-8b51-f65113937f5e)
 
   ## Project Description
   For this project, I decieded to deepen my understanding of inqurier and node to create an SVG icon generator, this generator will run on the CLI and take user input to create a customizied Icon for any project!
